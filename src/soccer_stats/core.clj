@@ -30,12 +30,34 @@
 
 (defn merge-ranks [ranks] (apply merge-with (cons concat (vals ranks))))
 
+(defn calculate-max-ranks [merged-ranks] (apply max (map count (vals merged-ranks))))
+
 (defn avg [coll] (double (/ (reduce + coll) (count coll))))
 
 (def weighted-ranks (calculate-weighted-ranks (invert historic-ranks) weights))
 
 (def merged-ranks (merge-ranks weighted-ranks))
 
-(def predicted-ranks (sort-by val < (zipmap (keys merged-ranks) (map #(avg %) (vals merged-ranks)))))
+(def max-ranks (calculate-max-ranks merged-ranks))
 
+(defn filler [ranks weights] (inc (count ((first (keys weights)) ranks))))
+
+(def fill-value (filler historic-ranks weights))
+
+(defn apply-filler [coll size fill-value]
+  (take size (concat coll (repeat fill-value))))
+
+(defn fill-ranks [ranks size fill-value] 
+  (zipmap (keys ranks) (map #(apply-filler % size fill-value) (vals ranks))))
+
+(def filled-up-ranks (fill-ranks merged-ranks max-ranks fill-value))
+
+(defn predict-ranks [ranks] (sort-by val < (zipmap (keys ranks) (map #(avg %) (vals ranks)))))
+
+(def predicted-ranks-without-filler (predict-ranks merged-ranks))
+(def predicted-ranks (predict-ranks filled-up-ranks))
+
+(prn "not taking degradation into account")
+(pp/pprint predicted-ranks-without-filler)
+(prn "taking degradation into account")
 (pp/pprint predicted-ranks)

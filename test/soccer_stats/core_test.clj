@@ -50,3 +50,21 @@
             {:2015-2016 {"PSV" '(1 1 1) "AJA" '(2 2 2) "TWE" '(3 3 3)}
              :2014-2015 {"AJA" '(1 1) "PSV" '(2 2) "FEY" '(3 3)}})
           {"PSV" '(1 1 1 2 2) "AJA" '(2 2 2 1 1) "FEY" '(3 3) "TWE" '(3 3 3)}))))
+
+(deftest test-calculate-max-ranks
+  (testing "should compute the max number of item in the values of a merged-ranks map"
+    (is (= (calculate-max-ranks {"PSV" '(1 1 1 2 2) "AJA" '(2 2 2 1 1) "FEY" '(3 3) "TWE" '(3 3 3)}) 5))))
+
+(deftest test-filler
+  (testing "should find the number of teams in the competition and increment that number"
+    (= (filler test-historic-ranks test-weights) 4)))
+
+(deftest test-apply-filler
+  (testing "should fill a collection up to a specified size with a specified fill-value"
+    (is (= (apply-filler '(1 2 3) 5 42) '(1 2 3 42 42)))))
+
+(deftest test-fill-ranks
+  (testing "should fill all ranks upto a specified size with a specified fill-value"
+    (is (= 
+          (fill-ranks {"PSV" '(1 1 1 2 2) "AJA" '(2 2 2 1 1) "FEY" '(3 3) "TWE" '(3 3 3)} 5 42)
+          {"PSV" '(1 1 1 2 2) "AJA" '(2 2 2 1 1) "FEY" '(3 3 42 42 42) "TWE" '(3 3 3 42 42)}))))
