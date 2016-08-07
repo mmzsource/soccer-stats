@@ -224,4 +224,25 @@
        :2014-2015 9
        :2015-2016 10
     }
+    :filter
+    #{
+         "Vitesse"
+         "ADO Den Haag"
+         "Excelsior"
+         "PSV"
+         "PEC Zwolle"
+         "NEC"
+         "AZ"
+         "Ajax"
+         "FC Groningen"
+         "Feyenoord"
+         "Heracles Almelo"
+         "Roda JC"
+         "SC Heerenveen"
+         "Sparta"
+         "FC Twente"
+         "FC Utrecht"
+         "Willem II"
+         "Go Ahead Eagles"
+      }
 }

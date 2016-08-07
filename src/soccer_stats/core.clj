@@ -11,12 +11,15 @@
      [clojure.edn :as edn]
      [clojure.pprint :as pp]))
 
-(def file2edn
-  (edn/read-string (slurp (io/resource "nederlandse-competitie-eindstanden.txt"))))
+(def file2edn (edn/read-string (slurp (io/resource "nederlandse-competitie-eindstanden.txt"))))
+
+(defn -main [] (prn "Prints predicted ranks based on (weighted) historic rank data"))
 
 (def weights (:weights file2edn))
 
 (def historic-ranks (:ranks file2edn))
+
+(def club-filter (:filter file2edn))
 
 (defn invert [ranks]
   (zipmap (keys ranks) (map clojure.set/map-invert (vals ranks))))
@@ -52,12 +55,16 @@
 
 (def filled-up-ranks (fill-ranks merged-ranks max-ranks fill-value))
 
-(defn predict-ranks [ranks] (sort-by val < (zipmap (keys ranks) (map #(avg %) (vals ranks)))))
+;; if you want to spy on all calculated ranks enable the next line and disable the one after that
+;;(defn calculate-average-ranks [ranks] #spy/p (zipmap (keys ranks) (map #(avg %) (vals ranks))))
+(defn calculate-average-ranks [ranks] (zipmap (keys ranks) (map #(avg %) (vals ranks))))
 
-(def predicted-ranks-without-filler (predict-ranks merged-ranks))
-(def predicted-ranks (predict-ranks filled-up-ranks))
+(def filtered-ranks (select-keys (calculate-average-ranks filled-up-ranks) club-filter))
 
-(prn "not taking degradation into account")
-(pp/pprint predicted-ranks-without-filler)
-(prn "taking degradation into account")
-(pp/pprint predicted-ranks)
+(def filtered-sorted-ranks (sort-by val < filtered-ranks))
+
+(def new-clubs (clojure.set/difference club-filter (into #{} (keys filtered-ranks))))
+
+(if (empty? new-clubs)
+  (pp/pprint filtered-sorted-ranks)
+  (pp/pprint (concat filtered-sorted-ranks (map #(vector % "???") new-clubs))))

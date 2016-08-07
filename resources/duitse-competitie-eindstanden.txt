@@ -1,0 +1,248 @@
+{ :ranks
+   {
+     :2015-2016 
+     {
+       1 "Bayern München"
+       2 "Borussia Dortmund"
+       3 "Bayer Leverkusen"
+       4 "Borussia Mönchengladbach"
+       5 "FC Schalke 04"
+       6 "FSV Mainz 05"
+       7 "Hertha BSC"
+       8 "VFL Wolfsburg"
+       9 "1.FC Köln"
+       10  "Hamburger SV"
+       11  "FC Ingolstadt 04"
+       12  "FC Augsburg"
+       13  "Werder Bremen"
+       14  "SV Darmstadt 98"
+       15  "1899 Hoffenheim"
+       16  "Eintracht Frankfurt"
+       17  "VFB Stuttgart"
+       18  "Hannover 96"
+     }
+     :2014-2015
+     {
+       1 "Bayern München"
+       2 "VFL Wolfsburg"
+       3 "Borussia Mönchengladbach"
+       4 "Bayer Leverkusen"
+       5 "FC Augsburg"
+       6 "FC Schalke 04"
+       7 "Borussia Dortmund"
+       8 "1899 Hoffenheim"
+       9 "Eintracht Frankfurt"
+       10  "Werder Bremen"
+       11  "FSV Mainz 05"
+       12  "1.FC Köln"
+       13  "Hannover 96"
+       14  "VFB Stuttgart"
+       15  "Hertha BSC"
+       16  "Hamburger SV"
+       17  "SC Freiburg"
+       18  "SC Paderborn 07"
+     }
+     :2013-2014
+     {
+       1 "Bayern München"
+       2 "Borussia Dortmund"
+       3 "FC Schalke 04"
+       4 "Bayer Leverkusen"
+       5 "VFL Wolfsburg"
+       6 "Borussia Mönchengladbach"
+       7 "FSV Mainz 05"
+       8 "FC Augsburg"
+       9 "1899 Hoffenheim"
+       10  "Hannover 96"
+       11  "Hertha BSC"
+       12  "Werder Bremen"
+       13  "Eintracht Frankfurt"
+       14  "SC Freiburg"
+       15  "VFB Stuttgart"
+       16  "Hamburger SV"
+       17  "1.FC Nürnberg"
+       18  "Eintracht Braunschweig"
+     }     
+     :2012-2013
+      {
+      1 "Bayern München"
+      2 "Borussia Dortmund"
+      3 "Bayer Leverkusen"
+      4 "FC Schalke 04"
+      5 "SC Freiburg"
+      6 "Eintracht Frankfurt"
+      7 "Hamburger SV"
+      8 "Borussia Mönchengladbach"
+      9 "Hannover 96"
+      10 "1.FC Nürnberg"
+      11 "VFL Wolfsburg"
+      12 "VFB Stuttgart"
+      13 "FSV Mainz 05"
+      14 "Werder Bremen"
+      15 "FC Augsburg"
+      16 "1899 Hoffenheim"
+      17 "Fortuna Düsseldorf"
+      18 "SpVgg Greuther Fürth"
+      }
+      :2011-2012
+       {
+       1 "Borussia Dortmund"
+       2 "Bayern München"
+       3 "FC Schalke 04"
+       4 "Borussia Mönchengladbach"
+       5 "Bayer Leverkusen"
+       6 "VFB Stuttgart"
+       7 "Hannover 96"
+       8 "VFL Wolfsburg"
+       9 "Werder Bremen"
+       10  "1.FC Nürnberg"
+       11  "1899 Hoffenheim"
+       12  "SC Freiburg"
+       13  "FSV Mainz"
+       14  "FC Augsburg"
+       15  "Hamburger SV"
+       16  "Hertha BSC"
+       17  "1.FC Köln"
+       18  "FC Kaiserslautern"
+     }     
+     :2010-2011
+     {
+       1 "Borussia Dortmund"
+       2 "Bayer Leverkusen"
+       3 "Bayern München"
+       4 "Hannover 96"
+       5 "FSV Mainz 05"
+       6 "1.FC Nürnberg"
+       7 "FC Kaiserslautern"
+       8 "Hamburger SV"
+       9 "SC Freiburg"
+       10 "1.FC Köln"
+       11 "1899 Hoffenheim"
+       12 "VFB Stuttgart"
+       13 "Werder Bremen"
+       14 "FC Schalke 04"
+       15 "VFL Wolfsburg"
+       16 "Borussia Mönchengladbach"
+       17 "Eintracht Frankfurt"
+       18 "Sankt Pauli"
+     }
+     :2009-2010
+     {
+       1 "Bayern München"
+       2 "FC Schalke 04"
+       3 "Werder Bremen"
+       4 "Bayer Leverkusen"
+       5 "Borussia Dortmund"
+       6 "VFB Stuttgart"
+       7 "Hamburger SV"
+       8 "VFL Wolfsburg"
+       9 "FSV Mainz 05"
+       10 "Eintracht Frankfurt"
+       11 "1899 Hoffenheim"
+       12 "Borussia Mönchengladbach"
+       13 "1.FC Köln"
+       14 "SC Freiburg"
+       15 "Hannover 96"
+       16 "1.FC Nürnberg"
+       17 "VFL Bochum"
+       18 "Hertha BSC"
+     }
+     :2008-2009
+     {
+       1 "VFL Wolfsburg"
+       2 "Bayern München"
+       3 "VFB Stuttgart"
+       4 "Hertha BSC"
+       5 "Hamburger SV"
+       6 "Borussia Dortmund"
+       7 "1899 Hoffenheim" 
+       8 "FC Schalke 04" 
+       9 "Bayer Leverkusen"
+       10 "Werder Bremen"
+       11 "Hannover 96"
+       12 "1.FC Köln" 
+       13 "Eintracht Frankfurt"
+       14 "VFL Bochum"
+       15 "Borussia Mönchengladbach"
+       16 "Energie Cottbus"
+       17 "Karlsruher SC"
+       18 "Arminia Bielefeld"
+     }
+     :2007-2008
+     {
+       1 "Bayern München"
+       2 "Werder Bremen"
+       3 "FC Schalke 04"
+       4 "Hamburger SV"
+       5 "VFL Wolfsburg"
+       6 "VFB Stuttgart"
+       7 "Bayer Leverkusen"
+       8 "Hannover 96"
+       9 "Eintracht Frankfurt"
+       10 "Hertha BSC"
+       11 "Karlsruher SC"
+       12 "VFL Bochum"
+       13 "Borussia Dortmund"
+       14 "Energie Cottbus"
+       15 "Arminia Bielefeld"
+       16 "1.FC Nürnberg"
+       17 "Hansa Rostock"
+       18 "MSV Duisburg"
+     }
+     :2006-2007
+     {
+       1 "VFB Stuttgart"
+       2 "FC Schalke 04" 
+       3 "Werder Bremen" 
+       4 "Bayern München"
+       5 "Bayer Leverkusen"
+       6 "1.FC Nürnberg"
+       7 "Hamburger SV"
+       8 "VFL Bochum"
+       9 "Borussia Dortmund"
+       10 "Hertha BSC"
+       11 "Hannover 96" 
+       12 "Arminia Bielefeld"
+       13 "Energie Cottbus"
+       14 "Eintracht Frankfurt"
+       15 "VFL Wolfsburg"
+       16 "FSV Mainz 05"
+       17 "Alemannia Aachen"
+       18 "Borussia Mönchengladbach"
+     }
+  }
+    :weights 
+    {
+       :2006-2007 1
+       :2007-2008 2
+       :2008-2009 3
+       :2009-2010 4
+       :2010-2011 5
+       :2011-2012 6
+       :2012-2013 7
+       :2013-2014 8
+       :2014-2015 9
+       :2015-2016 10
+    }
+    :filter
+    #{
+        "1.FC Köln"
+        "1899 Hoffenheim"
+        "Bayer Leverkusen"
+        "Bayern München"
+        "Borussia Dortmund"
+        "Borussia Mönchengladbach"
+        "SV Darmstadt 98"
+        "Eintracht Frankfurt"
+        "FC Augsburg"
+        "FC Ingolstadt 04"
+        "FSV Mainz 05"
+        "Hamburger SV"
+        "Hertha BSC"
+        "RB Leipzig"
+        "SC Freiburg"
+        "FC Schalke 04"
+        "VFL Wolfsburg"
+        "Werder Bremen"
+    }
+}

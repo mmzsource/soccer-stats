@@ -1,17 +1,20 @@
 # soccer-stats
 
-A Clojure project which pulls in club positions of soccerclubs of the last 10 years and calculates the (weighted) average position.
-Might come in handy when doing predictions :)
+A Clojure project which pulls in club ranks of soccerclubs of the last x years and calculates the (weighted) average position. Simple prediction algorithm based on (weighted) historic ranks.
 
 ## Usage
 
-Do your own predictions by writing your data to the text file which can be found in the resources directory.
+### Test
 
-## Todo
+Execute `lein test` in the main folder.
 
-- Take degradation into account (adding last position+1 ?)
-- Show variation per club (in addition to average)
-- improve weighted positions function ... map over scores per year ... combined with for expression?
+### Run
+
+Execute `lein run` in the main folder
+
+### Experiment
+
+Depends on your setup. You can do your own predictions by adding a new file in the format of the already existing ones in the resource folder and executing the main core.clj file.
 
 ## License
 
