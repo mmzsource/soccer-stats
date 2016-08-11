@@ -6,8 +6,9 @@
 ;; Open core.clj and send complete file to repl (ctrl+, f)
 
 (ns soccer-stats.core
-  (:require 
+  (:require
      [clojure.java.io :as io]
+     [clojure.set :as set]
      [clojure.edn :as edn]
      [clojure.pprint :as pp]))
 
@@ -22,12 +23,12 @@
 (def club-filter (:filter file2edn))
 
 (defn invert [ranks]
-  (zipmap (keys ranks) (map clojure.set/map-invert (vals ranks))))
+  (zipmap (keys ranks) (map set/map-invert (vals ranks))))
 
 (defn apply-weight [year-ranks year-weight]
   (zipmap (keys year-ranks) (map #(repeat year-weight %) (vals year-ranks))))
 
-(defn calculate-weighted-ranks [ranks weights] 
+(defn calculate-weighted-ranks [ranks weights]
   (let [weight-keys (keys weights)]
     (zipmap weight-keys (map #(apply-weight (% ranks) (% weights)) weight-keys))))
 
@@ -50,7 +51,7 @@
 (defn apply-filler [coll size fill-value]
   (take size (concat coll (repeat fill-value))))
 
-(defn fill-ranks [ranks size fill-value] 
+(defn fill-ranks [ranks size fill-value]
   (zipmap (keys ranks) (map #(apply-filler % size fill-value) (vals ranks))))
 
 (def filled-up-ranks (fill-ranks merged-ranks max-ranks fill-value))
